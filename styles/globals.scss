@@ -1,16 +1,17 @@
-@import "_reset.scss";
+@import '_reset.scss';
 
 @font-face {
-  font-family: "Avenir Next Regular";
-  src: url("../fonts/AvenirNextRegular.otf") format("opentype");
+  font-family: 'Avenir Next Regular';
+  src: url('../fonts/AvenirNextRegular.otf') format('opentype');
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Avenir Next Regular", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Avenir Next Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  cursor: url('https://commons.wikimedia.org/wiki/File:Happy_smiley_face.png'), auto;
 }
 
 a {

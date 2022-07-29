@@ -1,0 +1,27 @@
+.button {
+  width: 1.8em;
+  height: 1.8em;
+  text-align: center;
+  font-size: clamp(1rem, 7vw, 3rem);
+
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  @media (prefers-color-scheme: dark) {
+    box-shadow: rgb(180, 180, 170, 0.3) 0px 7px 29px 0px;
+  }
+
+  transition: 200ms ease-in-out;
+
+  &:hover {
+    border: 1.5px solid black;
+    @media (prefers-color-scheme: dark) {
+      border: 1.5px solid white;
+    }
+  }
+  svg {
+    transform: translateY(0.4em);
+  }
+}
