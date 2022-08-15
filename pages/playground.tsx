@@ -39,7 +39,7 @@ const Projects: NextPage = () => {
     <>
       <MySEO
         description=""
-        page="Projects"
+        page="Playground"
       />
       <main className={styles.main}>
         <div className={styles.container}>
