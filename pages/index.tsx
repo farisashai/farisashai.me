@@ -13,7 +13,7 @@ const Home: NextPage<{lightMode: boolean}> = ({lightMode}) => {
       />
       <main className={styles.main}>
         <Hero />
-        <About />
+        {/* <About /> */}
       </main>
     </>
   );
