@@ -1,34 +1,42 @@
 .main {
-  min-height: 100vh;
-
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  padding: 4rem;
-
-  text-align: center;
-  line-height: 130%;
-
-  .name {
-    font-size: clamp(3em, 8vw, 6em);
-    margin-bottom: 2rem;
-    line-height: 100%;
+  section {
+    min-height: 100vh;
+    text-align: center;
+    line-height: 130%;
   }
 
-  .subtitle {
-    font-size: clamp(1em, 2vw, 1.25em);
-    text-align: justify;
-  }
-
-  .links {
+  .hero {
     display: flex;
-
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    padding: 4rem;
+    .name {
+      font-size: clamp(3em, 8vw, 6em);
+      margin-bottom: 2rem;
+      line-height: 100%;
+    }
 
-    gap: 1rem;
-    margin-top: 3rem;
+    .subtitle {
+      font-size: clamp(1em, 2vw, 1.25em);
+      text-align: justify;
+    }
+
+    .links {
+      display: flex;
+
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+  }
+
+  .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
