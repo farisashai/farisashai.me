@@ -12,4 +12,18 @@
     flex-flow: row nowrap;
     gap: 1rem;
   }
+
+  @keyframes fadeIn {
+    from {
+      text-decoration-color: rgba(var(--primary), 0);
+    }
+    to {
+      text-decoration-color: rgba(var(--primary), 255);
+    }
+  }
+  .active {
+    animation: fadeIn 250ms ease-in-out forwards;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
 }
