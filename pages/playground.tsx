@@ -60,7 +60,7 @@ const Projects: NextPage = () => {
           )}
         </div>
         <br />
-        <p>A few of the top tracks I'm listening to on repeat, updated in real time.</p>
+        <p>A few of the top tracks I&apos;m listening to on repeat, updated in real time.</p>
       </main>
     </>
   );
