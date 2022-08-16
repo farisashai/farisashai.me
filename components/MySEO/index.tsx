@@ -7,19 +7,25 @@ interface MySEOProps {
 
 const MySEO = ({page, description}: MySEOProps) => {
   return (
-    <NextSeo
-      title={page}
-      titleTemplate="Faris Ashai | %s"
-      defaultTitle="Faris Ashai"
-      description={description}
-      canonical="https://www.farisashai.me/"
-      openGraph={{
-        url: 'https://www.farisashai.me/',
-        title: `Faris Ashai | ${page}`,
-        description: description,
-        site_name: 'Faris Ashai',
-      }}
-    />
+    <>
+      <meta
+        name="color-scheme"
+        content="dark light"
+      />
+      <NextSeo
+        title={page}
+        titleTemplate="Faris Ashai | %s"
+        defaultTitle="Faris Ashai"
+        description={description}
+        canonical="https://www.farisashai.me/"
+        openGraph={{
+          url: 'https://www.farisashai.me/',
+          title: `Faris Ashai | ${page}`,
+          description: description,
+          site_name: 'Faris Ashai',
+        }}
+      />
+    </>
   );
 };
 

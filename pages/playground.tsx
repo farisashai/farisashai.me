@@ -32,7 +32,6 @@ const Projects: NextPage = () => {
     fetcher
   );
 
-  console.log({topTracks});
   const startIndex = Math.floor(Math.random() * (topTracks?.length - 5));
 
   return (
@@ -50,8 +49,8 @@ const Projects: NextPage = () => {
           ) : (
             shuffle(topTracks)
               .slice(startIndex, startIndex + 5)
-              .map(track => (
-                <div>
+              .map((track, index) => (
+                <div key={`${track.albumImageUrl}-${index}`}>
                   <img
                     onClick={() => window.open(track.songUrl)}
                     src={track.albumImageUrl}

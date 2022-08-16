@@ -1,3 +1,4 @@
+import DarkModeToggle from 'components/DarkModeToggle';
 import Link from 'next/link';
 import styles from './styles.module.scss';
 
@@ -11,6 +12,7 @@ const Navbar = () => {
         </Link>
         <Link href="/projects">Projects</Link>
         <Link href="/playground">Fun</Link>
+        <DarkModeToggle />
       </div>
     </nav>
   );

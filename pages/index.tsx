@@ -4,7 +4,7 @@ import MySEO from 'components/MySEO';
 import Hero from 'sections/Home/Hero';
 import About from 'sections/Home/About';
 
-const Home: NextPage<{lightMode: boolean}> = () => {
+const Home: NextPage = () => {
   return (
     <>
       <MySEO
