@@ -58,11 +58,11 @@ body.dark-theme {
   overflow: visible;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
 }
 
 .blob1 {
-  position: absolute;
+  position: fixed;
   z-index: -10;
   overflow: visible;
   top: 10%;
@@ -82,7 +82,7 @@ body.dark-theme {
 }
 
 .blob2 {
-  position: absolute;
+  position: fixed;
   z-index: -10;
   top: 70%;
   left: -10%;
