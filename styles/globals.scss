@@ -54,30 +54,70 @@ body.dark-theme {
   }
 }
 
+.blob1 {
+  position: absolute;
+  top: 10%;
+  left: 70%;
+  z-index: -10;
+  width: 440px;
+  height: 440px;
+  border-radius: 15rem;
+  background: linear-gradient(180deg, #ef516d 0%, rgba(239, 81, 109, 0) 100%),
+    radial-gradient(
+      94.51% 124.88% at 94.32% 94.43%,
+      rgba(65, 244, 255, 0.78) 0%,
+      rgba(131, 218, 255, 0.6552) 32.29%,
+      rgba(99, 175, 240, 0.3978) 64.06%
+    );
+  background-blend-mode: normal, normal, normal, normal, normal, normal;
+  filter: blur(50px);
+}
+
+.blob2 {
+  position: absolute;
+  top: 70%;
+  left: -10%;
+  z-index: -10;
+  width: 440px;
+  height: 440px;
+  border-radius: 15rem;
+  background: radial-gradient(
+      ellipse at 50% 50%,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(ellipse at 70% 60%, #c3e060 0%, rgba(195, 224, 96, 0) 90%),
+    radial-gradient(ellipse at 30% 30%, #c3e060 0%, rgba(195, 224, 96, 0) 60%),
+    radial-gradient(ellipse at bottom left, #00a3cb 0%, rgba(0, 163, 203, 0) 70%),
+    linear-gradient(135deg, rgba(18, 46, 119, 0) 0%, rgba(18, 46, 119, 0) 75%, #122e77 100%),
+    linear-gradient(to right, #625793 0%, #d55d64 35%, #e49129 65%, #c0671c 100%);
+  background-blend-mode: lighten, screen, darken, overlay, color-dodge, saturation;
+  filter: blur(46px);
+}
+
 body {
   transition: 400ms ease-in-out all;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: rgb(var(--secondary));
   color: rgb(var(--primary));
 
-  background-image: var(--bg-url);
-  background-color: rgb(var(--secondary));
+  // background-image: var(--bg-url);
+  // /* Safari 11+ */
+  // @media not all and (min-resolution: 0.001dpcm) {
+  //   @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+  //     background-image: none;
+  //   }
+  // }
+  // /* Test website on real Safari 11+ */
 
-  /* Safari 11+ */
-  @media not all and (min-resolution: 0.001dpcm) {
-    @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-      background-image: none;
-    }
-  }
-  /* Test website on real Safari 11+ */
+  // /* Safari 10.1 */
+  // @media not all and (min-resolution: 0.001dpcm) {
+  //   background-image: none;
+  // }
 
-  /* Safari 10.1 */
-  @media not all and (min-resolution: 0.001dpcm) {
-    background-image: none;
-  }
-
-  /* Safari 6.1-10.0 (but not 10.1) */
-  @media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
-    background-image: none;
-  }
+  // /* Safari 6.1-10.0 (but not 10.1) */
+  // @media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+  //   background-image: none;
+  // }
 }
