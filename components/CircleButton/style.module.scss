@@ -10,7 +10,7 @@
 
   box-shadow: 0px 10px 15px -3px rgba(var(--primary), 0.2);
   &:hover {
-    transition: 200ms ease-in-out;
+    transition: 400ms ease-in-out;
     box-shadow: 0px 10px 15px -3px rgba(var(--primary), 0.4);
   }
   svg {

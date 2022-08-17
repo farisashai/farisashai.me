@@ -2,20 +2,15 @@ import type {NextPage} from 'next';
 import styles from 'styles/pages/Playground.module.scss';
 import MySEO from 'components/MySEO';
 import useSWR from 'swr';
-import {NowPlayingResponse, TopTracksResponse} from 'types';
+import {TopTracksResponse} from 'types';
 import {fetcher} from 'utils';
 
 function shuffle(array) {
   let currentIndex = array.length,
     randomIndex;
-
-  // While there remain elements to shuffle.
   while (currentIndex != 0) {
-    // Pick a remaining element.
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
-
-    // And swap it with the current element.
     [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
   }
 
@@ -23,10 +18,6 @@ function shuffle(array) {
 }
 
 const Projects: NextPage = () => {
-  // const {data: nowPlaying, error: nowPlayingError} = useSWR<NowPlayingResponse>(
-  //   '/api/nowPlaying',
-  //   fetcher
-  // );
   const {data: topTracks, error: topTracksError} = useSWR<TopTracksResponse>(
     '/api/topTracks',
     fetcher
@@ -54,13 +45,14 @@ const Projects: NextPage = () => {
                   <img
                     onClick={() => window.open(track.songUrl)}
                     src={track.albumImageUrl}
+                    alt=""
                   />
                 </div>
               ))
           )}
         </div>
         <br />
-        <p>A few of the top tracks I&apos;m listening to on repeat, updated in real time.</p>
+        <p>Some of my top tracks right now, updated in real time.</p>
       </main>
     </>
   );

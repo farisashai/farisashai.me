@@ -1,8 +1,17 @@
 import CircleButton from 'components/CircleButton';
 import styles from 'styles/pages/Home.module.scss';
-import {FaInstagram, FaFacebookF, FaLinkedinIn, FaGithub, FaSpotify} from 'react-icons/fa';
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaLinkedinIn,
+  FaGithub,
+  FaSpotify,
+  FaMailchimp,
+  FaEnvelope,
+  FaHandshake,
+} from 'react-icons/fa';
 import {SiDevpost} from 'react-icons/si';
-// import Button from 'components/Button';
+import Button from 'components/Button';
 
 const links = [
   {link: 'https://www.instagram.com/farisashai/', icon: <FaInstagram />},
@@ -33,13 +42,22 @@ const Hero = () => {
           />
         ))}
       </div>
-      {/* <Button
-        title={'Email Me'}
-        onClick={function (EventListenerOrEventListenerObject?: any) {
-          throw new Error('Function not implemented.');
-        }}
-        type={'primary'}
-      /> */}
+      <div className={styles.actions}>
+        <Button
+          title="Let's Talk"
+          href="mailto:fashai@ucsd.edu"
+          type="link"
+          variant="primary"
+          icon={<FaEnvelope size={30} />}
+        />
+        <Button
+          title="Let's Meet"
+          href="https://koalendar.com/e/coffee-chat-with-faris-ashai"
+          type="link"
+          variant="secondary"
+          icon={<FaHandshake size={30} />}
+        />
+      </div>
     </section>
   );
 };

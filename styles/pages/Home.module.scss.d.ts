@@ -3,6 +3,7 @@
 declare namespace HomeModuleScssNamespace {
   export interface IHomeModuleScss {
     about: string;
+    actions: string;
     hero: string;
     links: string;
     main: string;

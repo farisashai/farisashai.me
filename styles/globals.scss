@@ -6,22 +6,21 @@
   src: url('../fonts/AvenirNextRegular.otf') format('opentype');
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: 'Avenir Next Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  // cursor: url('https://commons.wikimedia.org/wiki/File:Happy_smiley_face.png'), auto;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 :root {
@@ -106,29 +105,10 @@ body.dark-theme {
 }
 
 body {
-  transition: 400ms ease-in-out all;
+  transition: 400ms ease-in-out;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: rgb(var(--secondary));
   color: rgb(var(--primary));
-  // overflow: hidden;
-  // background-image: var(--bg-url);
-  // /* Safari 11+ */
-  // @media not all and (min-resolution: 0.001dpcm) {
-  //   @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-  //     background-image: none;
-  //   }
-  // }
-  // /* Test website on real Safari 11+ */
-
-  // /* Safari 10.1 */
-  // @media not all and (min-resolution: 0.001dpcm) {
-  //   background-image: none;
-  // }
-
-  // /* Safari 6.1-10.0 (but not 10.1) */
-  // @media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
-  //   background-image: none;
-  // }
 }
