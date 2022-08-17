@@ -8,10 +8,10 @@
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
 
-  transition: 200ms ease-in-out;
-  box-shadow: 0px 10px 15px -3px rgba(var(--primary), 0.1);
+  box-shadow: 0px 10px 15px -3px rgba(var(--primary), 0.2);
   &:hover {
-    box-shadow: 0px 10px 15px -3px rgba(var(--primary), 0.3);
+    transition: 200ms ease-in-out;
+    box-shadow: 0px 10px 15px -3px rgba(var(--primary), 0.4);
   }
   svg {
     transform: translateY(0.4em);
