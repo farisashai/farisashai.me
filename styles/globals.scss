@@ -55,7 +55,7 @@ body.dark-theme {
 }
 
 .blobs {
-  overflow: hidden;
+  overflow: visible;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -64,6 +64,7 @@ body.dark-theme {
 .blob1 {
   position: absolute;
   z-index: -10;
+  overflow: visible;
   top: 10%;
   left: 70%;
   width: 440px;
@@ -85,6 +86,7 @@ body.dark-theme {
   z-index: -10;
   top: 70%;
   left: -10%;
+  overflow: visible;
   width: 440px;
   height: 440px;
   border-radius: 15rem;
