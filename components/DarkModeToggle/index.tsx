@@ -17,6 +17,7 @@ const DarkModeToggle = () => {
   return (
     <button
       className={style.button}
+      type="button"
       onClick={() => {
         const prefersDarkScheme =
           window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');

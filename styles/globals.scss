@@ -2,6 +2,7 @@
 
 @font-face {
   font-family: 'Avenir Next Regular';
+  font-display: swap;
   src: url('../fonts/AvenirNextRegular.otf') format('opentype');
 }
 
@@ -26,25 +27,29 @@ a {
 :root {
   --primary-light: 0, 0, 0;
   --primary-dark: 255, 255, 255;
-  --bg-url-light: url('/light.avif');
-  --bg-url-dark: url('/dark.avif');
+  --bg-url-light: url('/light.avif'), url('/light.png');
+  --bg-url-dark: url('/dark.avif'), url('/dark.png');
 }
 
 body {
   --primary: var(--primary-light);
+  --secondary: var(--primary-dark);
   --bg-url: var(--bg-url-light);
 }
 body.dark-theme {
   --primary: var(--primary-dark);
+  --secondary: var(--primary-light);
   --bg-url: var(--bg-url-dark);
 }
 @media (prefers-color-scheme: dark) {
   body {
     --primary: var(--primary-dark);
+    --secondary: var(--primary-light);
     --bg-url: var(--bg-url-dark);
   }
   body.light-theme {
     --primary: var(--primary-light);
+    --secondary: var(--primary-dark);
     --bg-url: var(--bg-url-light);
   }
 }
@@ -54,5 +59,25 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: rgb(var(--primary));
+
   background-image: var(--bg-url);
+  background-color: rgb(var(--secondary));
+
+  /* Safari 11+ */
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+      background-image: none;
+    }
+  }
+  /* Test website on real Safari 11+ */
+
+  /* Safari 10.1 */
+  @media not all and (min-resolution: 0.001dpcm) {
+    background-image: none;
+  }
+
+  /* Safari 6.1-10.0 (but not 10.1) */
+  @media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+    background-image: none;
+  }
 }

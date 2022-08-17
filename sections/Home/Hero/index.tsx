@@ -2,6 +2,7 @@ import CircleButton from 'components/CircleButton';
 import styles from 'styles/pages/Home.module.scss';
 import {FaInstagram, FaFacebookF, FaLinkedinIn, FaGithub, FaSpotify} from 'react-icons/fa';
 import {SiDevpost} from 'react-icons/si';
+// import Button from 'components/Button';
 
 const links = [
   {link: 'https://www.instagram.com/farisashai/', icon: <FaInstagram />},
@@ -32,6 +33,13 @@ const Hero = () => {
           />
         ))}
       </div>
+      {/* <Button
+        title={'Email Me'}
+        onClick={function (EventListenerOrEventListenerObject?: any) {
+          throw new Error('Function not implemented.');
+        }}
+        type={'primary'}
+      /> */}
     </section>
   );
 };
