@@ -4,6 +4,7 @@ import MySEO from 'components/MySEO';
 import useSWR from 'swr';
 import {TopTracksResponse} from 'types';
 import {fetcher} from 'utils';
+import Image from 'next/image';
 
 function shuffle(array) {
   let currentIndex = array.length,
@@ -43,11 +44,13 @@ const Projects: NextPage = () => {
               .slice(startIndex, startIndex + 5)
               .map((track, index) => (
                 <div key={`${track.albumImageUrl}-${index}`}>
-                  <img
-                    onClick={() => window.open(track.songUrl)}
-                    src={track.albumImageUrl}
-                    alt=""
-                  />
+                  <a href={track.songUrl}>
+                    <Image
+                      layout="fill"
+                      src={track.albumImageUrl}
+                      alt=""
+                    />
+                  </a>
                 </div>
               ))
           )}
