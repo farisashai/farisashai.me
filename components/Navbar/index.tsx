@@ -15,10 +15,10 @@ const Navbar = () => {
           Resume
         </Link>
         <Link href="/projects">
-          <a className={router.route === '/projects' && styles.active}>Projects</a>
+          <a className={router.route === '/projects' ? styles.active : ''}>Projects</a>
         </Link>
         <Link href="/playground">
-          <a className={router.route === '/playground' && styles.active}>Fun</a>
+          <a className={router.route === '/playground' ? styles.active : ''}>Fun</a>
         </Link>
         <DarkModeToggle />
       </div>
