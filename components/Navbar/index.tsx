@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <Link href="/">
-        <a className={router.route === '/' && styles.active}>Faris Ashai</a>
+        <a className={router.route === '/' ? styles.active : ''}>Faris Ashai</a>
       </Link>
       <div className={styles.navlinks}>
         <Link href="https://drive.google.com/file/d/1JII5zavhs-pZSX_oZ3tWi8l0zH1v6qZR/view?usp=sharing">

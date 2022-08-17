@@ -34,11 +34,11 @@ const DarkModeToggle = () => {
     >
       <FiSun
         size={20}
-        className={`${style.icon} ${!darkMode && style.active}`}
+        className={`${style.icon} ${!darkMode ? style.active : ''}`}
       />
       <FiMoon
         size={20}
-        className={`${style.icon} ${darkMode && style.active}`}
+        className={`${style.icon} ${darkMode ? style.active : ''}`}
       />
     </button>
   );
