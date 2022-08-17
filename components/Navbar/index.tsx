@@ -9,7 +9,7 @@ const Navbar = () => {
     <>
       <nav className={styles.navbar}>
         <Link href="/">
-          <a className={router.route === '/' ? styles.active : ''}>Faris Ashai</a>
+          <a className={router.route === '/' ? styles.active : ''}>FA</a>
         </Link>
         <div className={styles.navlinks}>
           <Link href="/resume.pdf">Resume</Link>
