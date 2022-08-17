@@ -26,8 +26,8 @@ a {
 :root {
   --primary-light: 0, 0, 0;
   --primary-dark: 255, 255, 255;
-  --bg-url-light: url('https://images.unsplash.com/photo-1604079628040-94301bb21b91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2731&q=80');
-  --bg-url-dark: url('https://images.unsplash.com/photo-1614852207179-f21528f68aa0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+  --bg-url-light: url('/light.png');
+  --bg-url-dark: url('/dark.png');
 }
 
 body {
