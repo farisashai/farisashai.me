@@ -10,6 +10,7 @@ const Home: NextPage = () => {
       <MySEO
         description="My portfolio. Current Software Engineering Intern at Apple and Vice President of Development at ACM UCSD"
         page="Home"
+        path="/"
       />
       <main className={styles.main}>
         <Hero />

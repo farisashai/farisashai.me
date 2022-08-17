@@ -28,8 +28,9 @@ const Projects: NextPage = () => {
   return (
     <>
       <MySEO
-        description=""
+        description="My interests and hobbies"
         page="Playground"
+        path="/playground"
       />
       <main className={styles.main}>
         <div className={styles.container}>

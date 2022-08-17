@@ -3,9 +3,10 @@ import {NextSeo} from 'next-seo';
 interface MySEOProps {
   page: string;
   description: string;
+  path: string;
 }
 
-const MySEO = ({page, description}: MySEOProps) => {
+const MySEO = ({page, description, path}: MySEOProps) => {
   return (
     <>
       <meta
@@ -17,9 +18,9 @@ const MySEO = ({page, description}: MySEOProps) => {
         titleTemplate="Faris Ashai | %s"
         defaultTitle="Faris Ashai"
         description={description}
-        canonical="https://www.farisashai.me/"
+        canonical={`https://www.farisashai.me${path}`}
         openGraph={{
-          url: 'https://www.farisashai.me/',
+          url: `https://www.farisashai.me${path}`,
           title: `Faris Ashai | ${page}`,
           description: description,
           site_name: 'Faris Ashai',

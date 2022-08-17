@@ -6,8 +6,9 @@ const Projects: NextPage = () => {
   return (
     <>
       <MySEO
-        description=""
+        description="Some of my projects and highlighted work"
         page="Projects"
+        path="/projects"
       />
       <main className={styles.main}>Projects Here Soon!</main>
     </>

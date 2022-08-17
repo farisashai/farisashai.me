@@ -18,6 +18,7 @@ const DarkModeToggle = () => {
     <button
       className={style.button}
       type="button"
+      aria-label="Dark Mode Toggle"
       onClick={() => {
         const prefersDarkScheme =
           window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
