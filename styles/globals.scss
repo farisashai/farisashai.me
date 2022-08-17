@@ -101,7 +101,7 @@ body {
   background-repeat: no-repeat;
   background-color: rgb(var(--secondary));
   color: rgb(var(--primary));
-
+  overflow: hidden;
   // background-image: var(--bg-url);
   // /* Safari 11+ */
   // @media not all and (min-resolution: 0.001dpcm) {
