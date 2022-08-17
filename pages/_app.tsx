@@ -5,12 +5,12 @@ import Navbar from 'components/Navbar';
 function MyApp({Component, pageProps}: AppProps) {
   return (
     <>
+      <Navbar />
+      <Component {...pageProps} />
       <div className="blobs">
         <div className="blob1" />
         <div className="blob2" />
       </div>
-      <Navbar />
-      <Component {...pageProps} />
     </>
   );
 }
