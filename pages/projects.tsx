@@ -16,3 +16,7 @@ const Projects: NextPage = () => {
 };
 
 export default Projects;
+
+export const config = {
+  unstable_runtimeJS: false,
+};

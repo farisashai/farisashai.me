@@ -6,51 +6,40 @@
   src: url('../fonts/AvenirNextRegular.otf') format('opentype');
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Avenir Next Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 :root {
   --primary-light: 0, 0, 0;
   --primary-dark: 255, 255, 255;
-  --bg-url-light: url('/light.avif'), url('/light.png');
-  --bg-url-dark: url('/dark.avif'), url('/dark.png');
 }
 
 body {
   --primary: var(--primary-light);
   --secondary: var(--primary-dark);
-  --bg-url: var(--bg-url-light);
 }
+
 body.dark-theme {
   --primary: var(--primary-dark);
   --secondary: var(--primary-light);
-  --bg-url: var(--bg-url-dark);
 }
+
 @media (prefers-color-scheme: dark) {
   body {
     --primary: var(--primary-dark);
     --secondary: var(--primary-light);
-    --bg-url: var(--bg-url-dark);
   }
   body.light-theme {
     --primary: var(--primary-light);
     --secondary: var(--primary-dark);
-    --bg-url: var(--bg-url-light);
   }
+}
+
+body {
+  font-family: 'Avenir Next Regular', -apple-system, sans-serif;
+  transition: 400ms ease-in-out;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgb(var(--secondary));
+  color: rgb(var(--primary));
 }
 
 .blobs {
@@ -59,56 +48,47 @@ body.dark-theme {
   height: 100%;
   position: fixed;
   z-index: -10;
-}
 
-.blob1 {
-  position: fixed;
-  z-index: -10;
-  overflow: visible;
-  top: 10%;
-  left: 70%;
-  width: 440px;
-  height: 440px;
-  border-radius: 15rem;
-  background: linear-gradient(180deg, #ef516d 0%, rgba(239, 81, 109, 0) 100%),
-    radial-gradient(
-      94.51% 124.88% at 94.32% 94.43%,
-      rgba(65, 244, 255, 0.78) 0%,
-      rgba(131, 218, 255, 0.6552) 32.29%,
-      rgba(99, 175, 240, 0.3978) 64.06%
-    );
-  background-blend-mode: normal, normal, normal, normal, normal, normal;
-  filter: blur(50px);
-}
+  .blob1 {
+    position: fixed;
+    z-index: -10;
+    overflow: visible;
+    top: 10%;
+    left: 70%;
+    width: 440px;
+    height: 440px;
+    border-radius: 15rem;
+    background: linear-gradient(180deg, #ef516d 0%, rgba(239, 81, 109, 0) 100%),
+      radial-gradient(
+        94.51% 124.88% at 94.32% 94.43%,
+        rgba(65, 244, 255, 0.78) 0%,
+        rgba(131, 218, 255, 0.6552) 32.29%,
+        rgba(99, 175, 240, 0.3978) 64.06%
+      );
+    background-blend-mode: normal, normal, normal, normal, normal, normal;
+    filter: blur(50px);
+  }
 
-.blob2 {
-  position: fixed;
-  z-index: -10;
-  top: 70%;
-  left: -10%;
-  overflow: visible;
-  width: 440px;
-  height: 440px;
-  border-radius: 15rem;
-  background: radial-gradient(
-      ellipse at 50% 50%,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    radial-gradient(ellipse at 70% 60%, #c3e060 0%, rgba(195, 224, 96, 0) 90%),
-    radial-gradient(ellipse at 30% 30%, #c3e060 0%, rgba(195, 224, 96, 0) 60%),
-    radial-gradient(ellipse at bottom left, #00a3cb 0%, rgba(0, 163, 203, 0) 70%),
-    linear-gradient(135deg, rgba(18, 46, 119, 0) 0%, rgba(18, 46, 119, 0) 75%, #122e77 100%),
-    linear-gradient(to right, #625793 0%, #d55d64 35%, #e49129 65%, #c0671c 100%);
-  background-blend-mode: lighten, screen, darken, overlay, color-dodge, saturation;
-  filter: blur(46px);
-}
-
-body {
-  transition: 400ms ease-in-out;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: rgb(var(--secondary));
-  color: rgb(var(--primary));
+  .blob2 {
+    position: fixed;
+    z-index: -10;
+    top: 70%;
+    left: -10%;
+    overflow: visible;
+    width: 440px;
+    height: 440px;
+    border-radius: 15rem;
+    background: radial-gradient(
+        ellipse at 50% 50%,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      radial-gradient(ellipse at 70% 60%, #c3e060 0%, rgba(195, 224, 96, 0) 90%),
+      radial-gradient(ellipse at 30% 30%, #c3e060 0%, rgba(195, 224, 96, 0) 60%),
+      radial-gradient(ellipse at bottom left, #00a3cb 0%, rgba(0, 163, 203, 0) 70%),
+      linear-gradient(135deg, rgba(18, 46, 119, 0) 0%, rgba(18, 46, 119, 0) 75%, #122e77 100%),
+      linear-gradient(to right, #625793 0%, #d55d64 35%, #e49129 65%, #c0671c 100%);
+    background-blend-mode: lighten, screen, darken, overlay, color-dodge, saturation;
+    filter: blur(46px);
+  }
 }

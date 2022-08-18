@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import {PropsWithChildren} from 'react';
 import style from './style.module.scss';
 
 interface ButtonProps {
@@ -10,7 +9,7 @@ interface ButtonProps {
   href?: string;
   icon?: any;
 }
-const Button = ({title, onClick, href, icon, variant, type}: PropsWithChildren<ButtonProps>) => {
+const Button = ({title, onClick, href, icon, variant, type}: ButtonProps) => {
   if (type === 'button') {
     if (!onClick) {
       console.error('Missing onClick handler');

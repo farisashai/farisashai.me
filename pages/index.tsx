@@ -21,3 +21,7 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const config = {
+  unstable_runtimeJS: false,
+};
