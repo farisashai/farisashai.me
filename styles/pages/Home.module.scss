@@ -1,6 +1,7 @@
 .main {
+  padding-top: 5rem;
   section {
-    min-height: 100vh;
+    min-height: calc(100vh - 5rem);
     text-align: center;
     line-height: 130%;
   }
@@ -18,8 +19,9 @@
     }
 
     .subtitle {
-      font-size: clamp(1em, 2vw, 1.25em);
-      text-align: justify;
+      font-size: 1.1em;
+      text-align: center;
+
       line-height: 150%;
     }
 
