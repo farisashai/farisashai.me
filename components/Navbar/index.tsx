@@ -2,6 +2,7 @@ import DarkModeToggle from 'components/DarkModeToggle';
 import Link from 'next/link';
 import styles from './styles.module.scss';
 import {useRouter} from 'next/router';
+import Image from 'next/image';
 
 const Navbar = () => {
   const router = useRouter();
@@ -9,7 +10,14 @@ const Navbar = () => {
     <>
       <nav className={styles.navbar}>
         <Link href="/">
-          <a className={router.route === '/' ? styles.active : ''}>FA</a>
+          <a className={styles.logo}>
+            <Image
+              src="/logo.png"
+              width="32"
+              height="32"
+              alt="logo"
+            />
+          </a>
         </Link>
         <div className={styles.navlinks}>
           <Link href="/resume.pdf">Resume</Link>

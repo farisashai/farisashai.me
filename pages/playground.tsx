@@ -46,6 +46,7 @@ const Projects: NextPage = () => {
                 <div key={`${track.albumImageUrl}-${index}`}>
                   <a href={track.songUrl}>
                     <Image
+                      priority
                       layout="fill"
                       src={track.albumImageUrl}
                       alt=""

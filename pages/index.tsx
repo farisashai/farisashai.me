@@ -2,7 +2,6 @@ import type {NextPage} from 'next';
 import styles from 'styles/pages/Home.module.scss';
 import MySEO from 'components/MySEO';
 import Hero from 'sections/Home/Hero';
-import About from 'sections/Home/About';
 
 const Home: NextPage = () => {
   return (

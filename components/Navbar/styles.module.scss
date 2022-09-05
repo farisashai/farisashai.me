@@ -8,6 +8,12 @@
   right: 0;
   position: fixed;
 
+  .logo {
+    line-height: 2rem;
+    display: inline-block;
+    margin: 16px 0;
+  }
+
   .navlinks {
     float: right;
     display: flex;

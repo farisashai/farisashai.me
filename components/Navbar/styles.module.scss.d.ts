@@ -4,6 +4,7 @@ declare namespace StylesModuleScssNamespace {
   export interface IStylesModuleScss {
     active: string;
     fadeIn: string;
+    logo: string;
     navbar: string;
     navlinks: string;
   }
