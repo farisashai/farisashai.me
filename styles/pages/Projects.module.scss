@@ -17,5 +17,9 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 2rem;
     transition: 1s all;
+
+    @media only screen and (max-width: 400px) {
+      grid-template-columns: 1fr;
+    }
   }
 }

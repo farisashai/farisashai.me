@@ -45,6 +45,7 @@ const Projects: NextPage = () => {
               .map((track, index) => (
                 <div key={`${track.albumImageUrl}-${index}`}>
                   <a href={track.songUrl}>
+                    Song Link
                     <Image
                       priority
                       layout="fill"
