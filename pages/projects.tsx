@@ -15,6 +15,11 @@ const Projects: NextPage = () => {
       <main className={styles.main}>
         <div className={styles.grid}>
           <ProjectCard
+            name="ignis"
+            link="https://ignis-bigred.vercel.app/"
+            coverImage="/projects/ignis.jpg"
+          />
+          <ProjectCard
             name="ACM Membership Portal"
             link="https://members.acmucsd.com/"
             coverImage="/projects/membershipportal.jpg"
