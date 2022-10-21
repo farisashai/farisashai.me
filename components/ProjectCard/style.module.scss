@@ -1,15 +1,14 @@
 .item {
   position: relative;
-  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 1rem;
 
   overflow: hidden;
   display: block;
-  height: auto;
+  height: min-content;
 
   img {
-    min-height: 100%;
     height: auto;
     width: 100%;
+    border-radius: 1rem;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25);
   }
 }
