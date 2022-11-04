@@ -23,18 +23,40 @@
       'C C D D B B B'
       'C C E E E E E'
       'C C E E E E E';
-    > div {
+    .songCard {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
       border-radius: 16px;
+      cursor: pointer;
+      transition: 300ms ease-in-out all;
+
+      .trackOverlay {
+        position: absolute;
+        color: white;
+        top: 40%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 300ms ease-in-out all;
+
+        background: linear-gradient(180deg, #0000 0%, #000f 100%);
+
+        opacity: 0;
+      }
 
       &:hover {
-        transform: scale(1.015);
-        transition: 400ms ease-in-out;
-        cursor: pointer;
+        transform: scale(1.01);
+
+        .trackOverlay {
+          opacity: 0.8;
+        }
       }
 
       &:nth-child(1) {

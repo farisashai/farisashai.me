@@ -43,7 +43,11 @@ const Projects: NextPage = () => {
             shuffle(topTracks)
               .slice(startIndex, startIndex + 5)
               .map((track, index) => (
-                <div key={`${track.albumImageUrl}-${index}`}>
+                <div
+                  className={styles.songCard}
+                  key={`${track.albumImageUrl}-${index}`}
+                >
+                  <div className={styles.trackOverlay}>{track.title}</div>
                   <a href={track.songUrl}>
                     Song Link
                     <Image
