@@ -45,7 +45,7 @@
         justify-content: center;
         align-items: center;
         transition: 300ms ease-in-out all;
-
+        pointer-events: none;
         background: linear-gradient(180deg, #0000 0%, #000f 100%);
 
         opacity: 0;
