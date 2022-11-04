@@ -42,6 +42,8 @@
         right: 0;
         z-index: 99;
         display: flex;
+        flex-direction: column;
+        gap: 8px;
         justify-content: center;
         align-items: center;
         transition: 300ms ease-in-out all;
@@ -49,6 +51,14 @@
         background: linear-gradient(180deg, #0000 0%, #000f 100%);
 
         opacity: 0;
+
+        .mainText {
+          font-size: medium;
+        }
+
+        .subText {
+          font-size: small;
+        }
       }
 
       &:hover {

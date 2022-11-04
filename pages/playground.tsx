@@ -47,7 +47,10 @@ const Projects: NextPage = () => {
                   className={styles.songCard}
                   key={`${track.albumImageUrl}-${index}`}
                 >
-                  <div className={styles.trackOverlay}>{track.title}</div>
+                  <div className={styles.trackOverlay}>
+                    <span className={styles.mainText}>{track.title}</span>
+                    <span className={styles.subText}>{track.artist}</span>
+                  </div>
                   <a href={track.songUrl}>
                     Song Link
                     <Image
