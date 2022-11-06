@@ -9,9 +9,9 @@ function MyApp({Component, pageProps}: AppProps) {
     <>
       <GoogleAnalytics trackPageViews />
       <Navbar />
-      <PageTransition>
-        <Component {...pageProps} />
-      </PageTransition>
+      {/* <PageTransition> */}
+      <Component {...pageProps} />
+      {/* </PageTransition> */}
       <div className="blobs">
         <div className="blob1" />
         <div className="blob2" />

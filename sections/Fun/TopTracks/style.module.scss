@@ -1,0 +1,124 @@
+.songSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5rem 0 0 0;
+  gap: 5px;
+
+  margin: 20rem 0;
+
+  .songLeft {
+    font-family: 'Avenir Next Regular', -apple-system, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 47px;
+    letter-spacing: 0.635em;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    height: 70vh;
+    text-align: left;
+  }
+  .songRight {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: 0.295em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    text-orientation: sideways-right;
+  }
+
+  .container {
+    width: 75vw;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr 4fr 1fr 5fr;
+    gap: 15px 15px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      'A A A A B B B'
+      'A A A A B B B'
+      'C C D D B B B'
+      'C C D D B B B'
+      'C C E E E E E'
+      'C C E E E E E';
+    .songCard {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: 300ms ease-in-out all;
+
+      .trackOverlay {
+        position: absolute;
+        color: white;
+        top: 40%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+        transition: 300ms ease-in-out all;
+        pointer-events: none;
+        background: linear-gradient(180deg, #0000 0%, #000f 100%);
+
+        opacity: 0;
+
+        .mainText {
+          font-size: medium;
+        }
+
+        .subText {
+          font-size: small;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.01);
+
+        .trackOverlay {
+          opacity: 0.8;
+        }
+      }
+
+      &:nth-child(1) {
+        grid-area: A;
+      }
+      &:nth-child(2) {
+        grid-area: B;
+      }
+      &:nth-child(3) {
+        grid-area: C;
+      }
+      &:nth-child(4) {
+        grid-area: D;
+      }
+      &:nth-child(5) {
+        grid-area: E;
+      }
+      a {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

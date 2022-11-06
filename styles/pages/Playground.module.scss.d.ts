@@ -2,12 +2,7 @@
 
 declare namespace PlaygroundModuleScssNamespace {
   export interface IPlaygroundModuleScss {
-    container: string;
     main: string;
-    mainText: string;
-    songCard: string;
-    subText: string;
-    trackOverlay: string;
   }
 }
 

@@ -4,9 +4,11 @@ import MySEO from 'components/MySEO';
 import useSWR from 'swr';
 import {TopTracksResponse} from 'types';
 import {fetcher} from 'utils';
-import Image from 'next/image';
-
+import {ParallaxProvider} from 'react-scroll-parallax';
+import TopTracks from 'sections/Fun/TopTracks';
+import {useMemo} from 'react';
 function shuffle(array) {
+  if (!array) return [];
   let currentIndex = array.length,
     randomIndex;
   while (currentIndex != 0) {
@@ -24,7 +26,10 @@ const Projects: NextPage = () => {
     fetcher
   );
 
-  const startIndex = Math.floor(Math.random() * (topTracks?.length - 5));
+  const startIndex = useMemo(
+    () => Math.floor(Math.random() * (topTracks?.length - 5)),
+    [topTracks?.length]
+  );
 
   return (
     <>
@@ -33,40 +38,22 @@ const Projects: NextPage = () => {
         page="Playground"
         path="/playground"
       />
-      <main className={styles.main}>
-        <div className={styles.container}>
-          {topTracksError ? (
-            <p>Error Fetching Data</p>
-          ) : !topTracks ? (
-            <p>Loading</p>
-          ) : (
-            shuffle(topTracks)
-              .slice(startIndex, startIndex + 5)
-              .map((track, index) => (
-                <div
-                  className={styles.songCard}
-                  key={`${track.albumImageUrl}-${index}`}
-                >
-                  <div className={styles.trackOverlay}>
-                    <span className={styles.mainText}>{track.title}</span>
-                    <span className={styles.subText}>{track.artist}</span>
-                  </div>
-                  <a href={track.songUrl}>
-                    Song Link
-                    <Image
-                      priority
-                      layout="fill"
-                      src={track.albumImageUrl}
-                      alt=""
-                    />
-                  </a>
-                </div>
-              ))
-          )}
-        </div>
-        <br />
-        <p>Some of my top tracks right now, updated in real time.</p>
-      </main>
+      <ParallaxProvider>
+        <main className={styles.main}>
+          {/* <TopTracks
+            topTracksError={topTracksError}
+            topTracks={shuffle(topTracks).slice(startIndex, startIndex + 5)}
+          /> */}
+          <TopTracks
+            topTracksError={topTracksError}
+            topTracks={shuffle(topTracks).slice(startIndex, startIndex + 5)}
+          />
+          {/* <TopTracks
+            topTracksError={topTracksError}
+            topTracks={shuffle(topTracks).slice(startIndex, startIndex + 5)}
+          /> */}
+        </main>
+      </ParallaxProvider>
     </>
   );
 };
