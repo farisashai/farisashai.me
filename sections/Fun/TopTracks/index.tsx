@@ -4,12 +4,12 @@ import {Parallax} from 'react-scroll-parallax';
 
 const TopTracks = ({topTracksError, topTracks}) => (
   <div className={styles.songSection}>
-    <Parallax
+    {/* <Parallax
       speed={100}
-      translateY={[-200, 100]}
+      translateY={[-85, 100]}
     >
       <div className={styles.songLeft}>Top Tracks</div>
-    </Parallax>
+    </Parallax> */}
     <div className={styles.container}>
       {topTracksError ? (
         <p>Error Fetching Data</p>
@@ -38,12 +38,12 @@ const TopTracks = ({topTracksError, topTracks}) => (
         ))
       )}
     </div>
-    <Parallax
+    {/* <Parallax
       speed={-30}
-      translateY={[100, 0]}
+      translateY={[100, -75]}
     >
       <div className={styles.songRight}>Updated in real-time</div>
-    </Parallax>
+    </Parallax> */}
   </div>
 );
 
