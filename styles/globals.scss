@@ -5,31 +5,19 @@
   font-display: swap;
   src: url('../fonts/AvenirNextRegular.otf') format('opentype');
 }
-
 :root {
   --primary-light: 0, 0, 0;
   --primary-dark: 255, 255, 255;
 }
 
+[data-theme='dark'] {
+  --primary-light: 255, 255, 255;
+  --primary-dark: 0, 0, 0;
+}
+
 body {
   --primary: var(--primary-light);
   --secondary: var(--primary-dark);
-}
-
-body.dark-theme {
-  --primary: var(--primary-dark);
-  --secondary: var(--primary-light);
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    --primary: var(--primary-dark);
-    --secondary: var(--primary-light);
-  }
-  body.light-theme {
-    --primary: var(--primary-light);
-    --secondary: var(--primary-dark);
-  }
 }
 
 body {
