@@ -8,17 +8,14 @@
   right: 0;
   position: fixed;
 
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+
   .logo {
     line-height: 2rem;
     display: inline-block;
-    margin: 16px 0;
-  }
-
-  .navlinks {
-    float: right;
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 1rem;
+    margin: 1rem auto 0 1rem;
   }
 
   @keyframes fadeIn {

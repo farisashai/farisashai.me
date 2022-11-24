@@ -6,7 +6,6 @@ declare namespace StylesModuleScssNamespace {
     fadeIn: string;
     logo: string;
     navbar: string;
-    navlinks: string;
   }
 }
 

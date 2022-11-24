@@ -19,16 +19,14 @@ const Navbar = () => {
             />
           </a>
         </Link>
-        <div className={styles.navlinks}>
-          <Link href="/resume.pdf">Resume</Link>
-          <Link href="/projects">
-            <a className={router.route === '/projects' ? styles.active : ''}>Projects</a>
-          </Link>
-          <Link href="/playground">
-            <a className={router.route === '/playground' ? styles.active : ''}>Fun</a>
-          </Link>
-          <DarkModeToggle />
-        </div>
+        <Link href="/resume.pdf">Resume</Link>
+        <Link href="/projects">
+          <a className={router.route === '/projects' ? styles.active : ''}>Projects</a>
+        </Link>
+        <Link href="/playground">
+          <a className={router.route === '/playground' ? styles.active : ''}>Fun</a>
+        </Link>
+        <DarkModeToggle />
       </nav>
       {/* <Image
         src={'https://api.unsplash.com/random'}
