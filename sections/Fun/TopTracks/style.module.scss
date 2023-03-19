@@ -1,10 +1,10 @@
 .songSection {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 5rem 0 0 0;
-  gap: 5px;
+  gap: 1rem;
 
   .songLeft {
     font-family: 'Avenir Next Regular', -apple-system, sans-serif;
@@ -57,6 +57,9 @@
       cursor: pointer;
       transition: 300ms ease-in-out all;
 
+      &:hover {
+        box-shadow: 0px 10px 20px 0px rgba(var(--primary), 0.2);
+      }
       .trackOverlay {
         position: absolute;
         color: white;

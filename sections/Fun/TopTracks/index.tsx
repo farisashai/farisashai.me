@@ -26,7 +26,6 @@ const TopTracks = ({topTracksError, topTracks}) => (
               <span className={styles.subText}>{track.artist}</span>
             </div>
             <a href={track.songUrl}>
-              Song Link
               <Image
                 priority
                 layout="fill"
@@ -38,6 +37,7 @@ const TopTracks = ({topTracksError, topTracks}) => (
         ))
       )}
     </div>
+    <div>My top tracks right now, updated in real-time</div>
     {/* <Parallax
       speed={-30}
       translateY={[100, -75]}

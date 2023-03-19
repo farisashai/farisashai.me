@@ -2,7 +2,7 @@ import type {NextPage} from 'next';
 import styles from 'styles/pages/Playground.module.scss';
 import MySEO from 'components/MySEO';
 import useSWR from 'swr';
-import {TopTracksResponse} from 'types';
+import {TopTracksResponse, TrackInfo} from 'types';
 import {fetcher} from 'utils';
 import {ParallaxProvider} from 'react-scroll-parallax';
 import TopTracks from 'sections/Fun/TopTracks';
@@ -19,6 +19,12 @@ function shuffle(array) {
 
   return array;
 }
+
+const chooseUniqueCovers = (num: number, start: number, arr: TrackInfo[]) => {
+  return arr
+    .filter((value, index) => arr.findIndex(e => e.albumImageUrl === value.albumImageUrl) === index)
+    .slice(start, start + num);
+};
 
 const Projects: NextPage = () => {
   const {data: topTracks, error: topTracksError} = useSWR<TopTracksResponse>(
@@ -46,7 +52,7 @@ const Projects: NextPage = () => {
           /> */}
           <TopTracks
             topTracksError={topTracksError}
-            topTracks={shuffle(topTracks).slice(startIndex, startIndex + 5)}
+            topTracks={chooseUniqueCovers(5, startIndex, shuffle(topTracks))}
           />
           {/* <TopTracks
             topTracksError={topTracksError}
