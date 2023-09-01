@@ -40,14 +40,29 @@ const Projects: NextPage = () => {
             coverImage="/projects/quizlash.jpg"
           />
           <ProjectCard
+            name="wanderlust"
+            link="https://devpost.com/software/wanderlust-dj0ol3"
+            coverImage="/projects/wanderlust.jpeg"
+          />
+          <ProjectCard
             name="ASAP Response"
             link="https://devpost.com/software/asap-response"
             coverImage="/projects/asapresponse.png"
           />
           <ProjectCard
+            name="Matcha"
+            link="https://devpost.com/software/matcha-3wdl49"
+            coverImage="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/001/908/699/datas/gallery.jpg"
+          />
+          <ProjectCard
             name="ResReview"
             link="https://devpost.com/software/resreview"
             coverImage="/projects/resreview.jpg"
+          />
+          <ProjectCard
+            name="Holiday Soundbound"
+            link="https://devpost.com/software/holiday-soundboard"
+            coverImage="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/001/320/284/datas/original.jpg"
           />
         </div>
       </main>

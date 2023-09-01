@@ -29,10 +29,9 @@ const Hero = () => {
   return (
     <section className={styles.hero}>
       <h1 className={styles.name}>Faris Ashai</h1>
-      <h2 className={styles.subtitle}>
-        Hey, it&apos;s nice to see you! This website is still a work in progress. In the meantime,
-        feel free to reach out to me or stay in touch below.
-      </h2>
+      <h2 className={styles.subtitle}>Software Engineer at Apple</h2>
+      <br />
+      <h2 className={styles.subtitle}>Let&apos;s get in touch!</h2>
       <div className={styles.links}>
         {links.map(({link, icon}, index) => (
           <CircleButton
