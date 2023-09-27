@@ -12,7 +12,9 @@
     justify-content: center;
     align-items: center;
     padding: 3rem;
+
     .name {
+      font-family: 'Clearface', sans-serif;
       font-size: clamp(3em, 8vw, 6em);
       margin-bottom: 2rem;
       line-height: 100%;
@@ -21,7 +23,10 @@
     .subtitle {
       font-size: 1.1em;
       text-align: center;
+      display: flex;
 
+      align-items: center;
+      gap: 10px;
       line-height: 150%;
     }
 

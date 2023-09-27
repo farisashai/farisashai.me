@@ -5,6 +5,13 @@
   font-display: swap;
   src: url('../fonts/AvenirNextRegular.otf') format('opentype');
 }
+
+@font-face {
+  font-family: 'Clearface';
+  font-display: swap;
+  src: url('../fonts/Clearface.woff') format('woff');
+}
+
 :root {
   --primary-light: 0, 0, 0;
   --primary-dark: 255, 255, 255;
@@ -30,6 +37,17 @@ body {
   color: rgb(var(--primary));
 }
 
+@keyframes rotate {
+  from {
+    rotate: 0;
+    scale: 1.5;
+  }
+  to {
+    rotate: 360deg;
+    scale: 1.5;
+  }
+}
+
 .blobs {
   overflow: visible;
   width: 100%;
@@ -40,18 +58,17 @@ body {
   z-index: -10;
 
   .blob1 {
-    width: 250px;
-    height: 250px;
+    width: 60%;
+    height: 60%;
     position: fixed;
     border-radius: 50%;
 
-    top: 50%;
-    left: 50%;
+    top: 90%;
+    left: 80%;
     translate: -50% -50%;
 
-    scale: 1 1.2;
-
-    filter: blur(60px);
+    filter: blur(90px);
+    background-color: none;
 
     background: linear-gradient(180deg, #ef516d 0%, rgba(239, 81, 109, 0) 100%),
       radial-gradient(
@@ -60,21 +77,31 @@ body {
         rgba(131, 218, 255, 0.6552) 32.29%,
         rgba(99, 175, 240, 0.3978) 64.06%
       );
+    animation: rotate 40s infinite linear forwards;
+  }
+  .blob2 {
+    width: 60%;
+    height: 60%;
+    position: fixed;
+    border-radius: 50%;
 
-    @keyframes rotate {
-      from {
-        rotate: 0;
-        scale: 1 1.5;
-      }
-      50% {
-        scale: 1.2 0.8;
-      }
-      to {
-        rotate: 360deg;
-        scale: 1 1.5;
-      }
-    }
+    top: 5%;
+    left: 20%;
+    translate: -50% -50%;
 
-    animation: rotate 5000ms 2000ms infinite linear forwards;
+    filter: blur(70px);
+    background-color: none;
+
+    background: linear-gradient(90deg, hsla(270, 94%, 25%, 1) 0%, hsla(158, 94%, 49%, 1) 100%);
+
+    // background: linear-gradient(180deg, #ef516d 0%, rgba(239, 81, 109, 0) 100%),
+    //   radial-gradient(
+    //     94.51% 124.88% at 94.32% 94.43%,
+    //     rgba(65, 244, 255, 0.78) 0%,
+    //     rgba(131, 218, 255, 0.6552) 32.29%,
+    //     rgba(99, 175, 240, 0.3978) 64.06%
+    //   );
+
+    animation: rotate 30s infinite linear forwards;
   }
 }

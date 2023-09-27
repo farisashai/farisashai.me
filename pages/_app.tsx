@@ -7,18 +7,18 @@ import {ThemeProvider} from 'next-themes';
 import {useEffect, useRef} from 'react';
 
 function MyApp({Component, pageProps}: AppProps) {
-  const blobRef = useRef(null);
-  useEffect(() => {
-    document.addEventListener('mousemove', event => {
-      blobRef.current.animate(
-        {
-          left: `${event.clientX}px`,
-          top: `${event.clientY}px`,
-        },
-        {duration: 2000, fill: 'forwards'}
-      );
-    });
-  }, []);
+  // const blobRef = useRef(null);
+  // useEffect(() => {
+  //   document.addEventListener('mousemove', event => {
+  //     blobRef.current.animate(
+  //       {
+  //         left: `${event.clientX}px`,
+  //         top: `${event.clientY}px`,
+  //       },
+  //       {duration: 2000, fill: 'forwards'}
+  //     );
+  //   });
+  // }, []);
 
   return (
     <ThemeProvider>
@@ -28,10 +28,10 @@ function MyApp({Component, pageProps}: AppProps) {
       <Component {...pageProps} />
       {/* </PageTransition> */}
       <div className="blobs">
-        <div
-          className="blob1"
-          ref={blobRef}
-        />
+        <div className="blob1" />
+        <div className="blob2" />
+        <div className="blob3" />
+        {/* // ref={blobRef} */}
       </div>
     </ThemeProvider>
   );
