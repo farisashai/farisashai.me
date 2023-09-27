@@ -35,6 +35,9 @@ const Hero = () => {
           width={24}
           height={24}
           fill="rgb(var(--primary))"
+          style={{
+            transition: '0.3s ease-in-out fill',
+          }}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 384 512"
         >
