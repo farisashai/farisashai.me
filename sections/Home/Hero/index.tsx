@@ -58,14 +58,14 @@ const Hero = () => {
       <div className={styles.actions}>
         <Button
           title="Let's Talk"
-          href="mailto:fashai@ucsd.edu"
+          href="mailto:fashai@apple.com"
           type="link"
           variant="primary"
           icon={<FaEnvelope size={30} />}
         />
         <Button
           title="Let's Meet"
-          href="https://koalendar.com/e/coffee-chat-with-faris-ashai"
+          href="https://calendly.com/farisashai/30min"
           type="link"
           variant="secondary"
           icon={<FaHandshake size={30} />}
