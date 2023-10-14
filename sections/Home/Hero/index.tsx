@@ -14,11 +14,11 @@ import {SiDevpost} from 'react-icons/si';
 import Button from 'components/Button';
 
 const links = [
-  {link: 'https://www.instagram.com/farisashai/', icon: <FaInstagram />},
-  {link: 'https://www.facebook.com/farisashai/', icon: <FaFacebookF />},
   {link: 'https://www.linkedin.com/in/farisashai/', icon: <FaLinkedinIn />},
-  {link: 'https://devpost.com/farisashai', icon: <SiDevpost />},
   {link: 'https://github.com/farisashai/', icon: <FaGithub />},
+  {link: 'https://devpost.com/farisashai', icon: <SiDevpost />},
+  {link: 'https://www.facebook.com/farisashai/', icon: <FaFacebookF />},
+  {link: 'https://www.instagram.com/farisashai/', icon: <FaInstagram />},
   {
     link: 'https://open.spotify.com/user/ksjumrnqm89h68mommnjevzqg?si=2442253c04f34d21',
     icon: <FaSpotify width={200} />,
