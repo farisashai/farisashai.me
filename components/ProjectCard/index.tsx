@@ -5,19 +5,26 @@ interface ProjectCardProps {
   name: string;
   link: string;
   coverImage: string;
+  date: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = props => {
   return (
-    <a
-      href={props.link}
-      className={styles.item}
-    >
-      <img
-        alt={props.name}
-        src={props.coverImage}
-      />
-    </a>
+    <div className={styles.card}>
+      <a
+        href={props.link}
+        className={styles.item}
+      >
+        <img
+          alt={props.name}
+          src={props.coverImage}
+        />
+      </a>
+      <div className={styles.desc}>
+        <span>{props.name}</span>
+        <span>{props.date}</span>
+      </div>
+    </div>
   );
 };
 

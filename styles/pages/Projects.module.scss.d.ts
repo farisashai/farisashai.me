@@ -4,6 +4,7 @@ declare namespace ProjectsModuleScssNamespace {
   export interface IProjectsModuleScss {
     grid: string;
     main: string;
+    section: string;
   }
 }
 

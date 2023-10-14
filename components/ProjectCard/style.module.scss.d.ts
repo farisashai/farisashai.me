@@ -2,6 +2,8 @@
 
 declare namespace StyleModuleScssNamespace {
   export interface IStyleModuleScss {
+    card: string;
+    desc: string;
     item: string;
   }
 }
