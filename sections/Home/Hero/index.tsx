@@ -58,7 +58,7 @@ const Hero = () => {
       <div className={styles.actions}>
         <Button
           title="Let's Talk"
-          href="mailto:fashai@apple.com?subject=Let's%20chat!"
+          href="mailto:fashai@ucsd.com?subject=Let's%20chat!"
           type="link"
           variant="primary"
           icon={<FaEnvelope size={30} />}
