@@ -62,7 +62,7 @@ const Navbar = () => {
           <a href={nowPlaying?.songUrl}>Listen Now</a> */}
         </Popover.Panel>
       </Popover>
-      <Link href="/resume.pdf">
+      <Link href="https://read.cv/faris">
         <a
           href="replace"
           className={styles.firstLink}
