@@ -64,7 +64,7 @@ const Navbar = () => {
       </Popover>
       <Link href="https://read.cv/faris">
         <a
-          href="replace"
+          href="https://read.cv/faris"
           className={styles.firstLink}
         >
           Resume
