@@ -42,7 +42,7 @@ const Projects: NextPage = () => {
       <MySEO
         description="My interests and hobbies"
         page="Playground"
-        path="/playground"
+        path="/music"
       />
       <ParallaxProvider>
         <main className={styles.main}>
