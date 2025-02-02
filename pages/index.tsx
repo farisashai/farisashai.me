@@ -13,7 +13,6 @@ const Home: NextPage = () => {
       />
       <main className={styles.main}>
         <Hero />
-        {/* <About /> */}
       </main>
     </>
   );
