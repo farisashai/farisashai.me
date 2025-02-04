@@ -2,15 +2,8 @@
 
 declare namespace StyleModuleScssNamespace {
   export interface IStyleModuleScss {
-    container: string;
     loading: string;
-    mainText: string;
-    songCard: string;
-    songLeft: string;
-    songRight: string;
-    songSection: string;
-    subText: string;
-    trackOverlay: string;
+    ripple: string;
   }
 }
 

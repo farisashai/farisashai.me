@@ -47,6 +47,13 @@
       'C C D D B B B'
       'C C E E E E E'
       'C C E E E E E';
+
+    .loading {
+      grid-area: A / A / E / E;
+      display: flex;
+      align-items: center;
+    }
+
     .songCard {
       position: relative;
       display: flex;
