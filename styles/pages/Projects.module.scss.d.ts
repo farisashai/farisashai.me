@@ -2,9 +2,8 @@
 
 declare namespace ProjectsModuleScssNamespace {
   export interface IProjectsModuleScss {
-    grid: string;
+    dropin: string;
     main: string;
-    section: string;
   }
 }
 

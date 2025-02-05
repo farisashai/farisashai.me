@@ -2,11 +2,16 @@
 
 declare namespace StylesModuleScssNamespace {
   export interface IStylesModuleScss {
-    active: string;
-    fadeIn: string;
-    firstLink: string;
-    logo: string;
-    navbar: string;
+    artist: string;
+    currently: string;
+    hidden: string;
+    listenNow: string;
+    pop: string;
+    popAlbumCover: string;
+    popButton: string;
+    popPanel: string;
+    popTextContent: string;
+    title: string;
   }
 }
 
