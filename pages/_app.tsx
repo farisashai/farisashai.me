@@ -13,7 +13,7 @@ function MyApp({Component, pageProps}: AppProps) {
       <div className="blobs">
         <div className="blob1" />
         <div className="blob2" />
-        <div className="blob3" />
+        {/* <div className="blob3" /> */}
       </div>
     </ThemeProvider>
   );

@@ -28,7 +28,8 @@
         opacity: 0;
       }
     }
-    &.active {
+
+    &[data-active='true'] {
       animation-name: fadeIn;
       animation-duration: 400ms;
       animation-timing-function: ease-in-out;
