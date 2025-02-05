@@ -47,5 +47,6 @@ export const getTopTracks = async () => {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
+    cache: 'force-cache',
   });
 };

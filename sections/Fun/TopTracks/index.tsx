@@ -3,6 +3,7 @@ import styles from './style.module.scss';
 import Image from 'next/image';
 import {TopTracksResponse} from 'types';
 import Link from 'next/link';
+import {useMemo} from 'react';
 
 function shuffle(array) {
   if (!array) return [];
@@ -25,6 +26,15 @@ interface TopTracksProps {
 const TopTracks = ({topTracksError, topTracks}: TopTracksProps) => {
   const loading = !(topTracks?.length > 0);
 
+  const uniqueAlbumTracks = useMemo(
+    () =>
+      topTracks?.reduce((acc, current) => {
+        if (acc.map(track => track.album).includes(current.album)) return acc;
+        return [...acc, current];
+      }, []),
+    [topTracks]
+  );
+
   return (
     <div className={styles.songSection}>
       <div
@@ -41,7 +51,7 @@ const TopTracks = ({topTracksError, topTracks}: TopTracksProps) => {
             <Loading size={40} />
           </div>
         ) : (
-          shuffle(topTracks)
+          shuffle(uniqueAlbumTracks)
             .slice(0, 5)
             .map((track, index) => (
               <div
