@@ -2,7 +2,6 @@
 
 declare namespace StyleModuleScssNamespace {
   export interface IStyleModuleScss {
-    active: string;
     button: string;
     fadeIn: string;
     fadeOut: string;

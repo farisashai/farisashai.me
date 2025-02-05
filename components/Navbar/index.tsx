@@ -1,14 +1,17 @@
-import DarkModeToggle from 'components/DarkModeToggle';
+// import DarkModeToggle from 'components/DarkModeToggle';
 import Link from 'next/link';
 import styles from './styles.module.scss';
 import {useRouter} from 'next/router';
 import Image from 'next/image';
+
 import {Popover, Transition} from '@headlessui/react';
 import {fetcher} from 'utils';
 import {NowPlayingResponse} from 'types';
 import useSWR from 'swr';
 import {FaSpotify} from 'react-icons/fa';
 
+import dynamic from 'next/dynamic';
+const DarkModeToggle = dynamic(() => import('components/DarkModeToggle'), {ssr: false});
 const Navbar = () => {
   const router = useRouter();
 
@@ -76,7 +79,9 @@ const Navbar = () => {
       <Link href="/music">
         <a className={router.route === '/music' ? styles.active : ''}>Music</a>
       </Link>
-      <DarkModeToggle />
+      <div className={styles.toggleBox}>
+        <DarkModeToggle />
+      </div>
     </nav>
   );
 };

@@ -3,7 +3,6 @@
 declare namespace StyleModuleScssNamespace {
   export interface IStyleModuleScss {
     button: string;
-    primary: string;
   }
 }
 

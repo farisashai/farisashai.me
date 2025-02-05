@@ -17,6 +17,7 @@ declare namespace StylesModuleScssNamespace {
     popPanel: string;
     popTextContent: string;
     title: string;
+    toggleBox: string;
   }
 }
 
