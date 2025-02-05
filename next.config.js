@@ -37,7 +37,7 @@ module.exports = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['i.scdn.co'],
+    domains: ['i.scdn.co', 'www.farisashai.me'],
   },
   webpack(config) {
     config = withTypedCssModules(config);
