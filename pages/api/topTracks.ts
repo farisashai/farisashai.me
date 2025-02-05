@@ -4,6 +4,8 @@ import {TopTracksResponse} from 'types';
 
 const NO_DATA = [];
 
+export const revalidate = 3600; // revalidate the data at most every hour
+
 export default async function handler(_: NextApiRequest, res: NextApiResponse<TopTracksResponse>) {
   const response = await getTopTracks();
 
