@@ -1,3 +1,4 @@
+import {TbRefresh} from 'react-icons/tb';
 import {Loading} from 'components/Loading';
 import styles from './style.module.scss';
 import Image from 'next/image';
@@ -84,7 +85,7 @@ const TopTracks = ({topTracksError, topTracks}: TopTracksProps) => {
               cursor: 'pointer',
             }}
           >
-            Shuffle
+            Shuffle <TbRefresh />
           </span>
         </Link>
       </div>
