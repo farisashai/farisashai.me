@@ -6,6 +6,10 @@ import ProjectCard from 'components/ProjectCard';
 import Button from 'components/Button';
 import {FaArrowDown, FaEnvelope} from 'react-icons/fa';
 
+const RadioButton = () => {
+  return <button>Hackathons</button>;
+};
+
 const Projects: NextPage = () => {
   return (
     <>
@@ -24,14 +28,8 @@ const Projects: NextPage = () => {
         >
           Here&apos;s all of the projects I&apos;ve worked on (that I can share publicly)
         </h3>
-        <Button
-          title="Start"
-          href="mailto:farisashai@gmail.com?subject=Let's%20chat!"
-          type="link"
-          variant="primary"
-          icon={<FaArrowDown />}
-          className={styles.dropin}
-        />
+        <div></div>
+        <RadioButton />
       </main>
     </>
   );
