@@ -19,7 +19,7 @@ function shuffle(array) {
 }
 
 interface TopTracksProps {
-  topTracks: TopTracksResponse;
+  topTracks?: TopTracksResponse;
   topTracksError;
 }
 
