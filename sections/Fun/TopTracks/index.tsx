@@ -1,50 +1,85 @@
+import {Loading} from 'components/Loading';
 import styles from './style.module.scss';
 import Image from 'next/image';
-import {Parallax} from 'react-scroll-parallax';
+import {TopTracksResponse} from 'types';
+import Link from 'next/link';
 
-const TopTracks = ({topTracksError, topTracks}) => (
-  <div className={styles.songSection}>
-    {/* <Parallax
-      speed={100}
-      translateY={[-85, 100]}
-    >
-      <div className={styles.songLeft}>Top Tracks</div>
-    </Parallax> */}
-    <div className={styles.container}>
-      {topTracksError ? (
-        <p>Error Fetching Data</p>
-      ) : !topTracks ? (
-        <p>Loading</p>
-      ) : (
-        topTracks.map((track, index) => (
-          <div
-            className={styles.songCard}
-            key={`${track.albumImageUrl}-${index}`}
-          >
-            <div className={styles.trackOverlay}>
-              <span className={styles.mainText}>{track.title}</span>
-              <span className={styles.subText}>{track.artist}</span>
-            </div>
-            <a href={track.songUrl}>
-              <Image
-                priority
-                layout="fill"
-                src={track.albumImageUrl}
-                alt=""
-              />
-            </a>
+function shuffle(array) {
+  if (!array) return [];
+  let currentIndex = array.length,
+    randomIndex;
+  while (currentIndex != 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
+interface TopTracksProps {
+  topTracks: TopTracksResponse;
+  topTracksError;
+}
+
+const TopTracks = ({topTracksError, topTracks}: TopTracksProps) => {
+  const loading = !(topTracks?.length > 0);
+
+  return (
+    <div className={styles.songSection}>
+      <div
+        className={styles.container}
+        style={{
+          placeItems: loading ? 'center' : 'initial',
+        }}
+      >
+        {topTracksError ? (
+          <p>Error Fetching Data: {topTracksError}</p>
+        ) : loading ? (
+          <div className={styles.loading}>
+            <p>Loading</p>
+            <Loading size={40} />
           </div>
-        ))
-      )}
+        ) : (
+          shuffle(topTracks)
+            .slice(0, 5)
+            .map((track, index) => (
+              <div
+                className={styles.songCard}
+                key={`${track.albumImageUrl}-${index}`}
+              >
+                <div className={styles.trackOverlay}>
+                  <span className={styles.mainText}>{track.title}</span>
+                  <span className={styles.subText}>{track.artist}</span>
+                </div>
+                <a href={track.songUrl}>
+                  <Image
+                    priority
+                    layout="fill"
+                    src={track.albumImageUrl}
+                    alt=""
+                  />
+                </a>
+              </div>
+            ))
+        )}
+      </div>
+      <div>
+        My top tracks right now, updated in real-time &middot;{' '}
+        <Link href="/music">
+          <span
+            style={{
+              textDecoration: 'underline',
+              fontWeight: 500,
+              cursor: 'pointer',
+            }}
+          >
+            Shuffle
+          </span>
+        </Link>
+      </div>
     </div>
-    <div>My top tracks right now, updated in real-time</div>
-    {/* <Parallax
-      speed={-30}
-      translateY={[100, -75]}
-    >
-      <div className={styles.songRight}>Updated in real-time</div>
-    </Parallax> */}
-  </div>
-);
+  );
+};
 
 export default TopTracks;
