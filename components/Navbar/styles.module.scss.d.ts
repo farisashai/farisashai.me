@@ -7,6 +7,7 @@ declare namespace StylesModuleScssNamespace {
     firstLink: string;
     logo: string;
     navbar: string;
+    toggleBox: string;
   }
 }
 
