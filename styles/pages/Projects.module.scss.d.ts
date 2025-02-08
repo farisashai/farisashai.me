@@ -7,7 +7,6 @@ declare namespace ProjectsModuleScssNamespace {
     container: string;
     content: string;
     cover: string;
-    date: string;
     description: string;
     dropin: string;
     header: string;

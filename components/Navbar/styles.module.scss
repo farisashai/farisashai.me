@@ -39,6 +39,8 @@
 
   .toggleBox {
     width: 1.5rem;
-    height: 3rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
 }

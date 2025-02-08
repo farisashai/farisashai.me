@@ -1,15 +1,15 @@
 .button {
   background: none;
   width: 1.5rem;
-  height: 3rem;
+  height: 1.5rem;
   border: none;
   cursor: pointer;
   position: relative;
   .icon {
     color: rgb(var(--primary));
     position: absolute;
-    top: 64%;
-    left: 60%;
+    // top: 64%;
+    // left: 60%;
     transform: translate(-50%, -50%);
     opacity: 0;
     @keyframes fadeIn {

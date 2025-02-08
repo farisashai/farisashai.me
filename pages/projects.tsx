@@ -70,7 +70,7 @@ const ProjectCard = (event: ProjectInfo) => {
       <div className={styles.content}>
         <h1 className={styles.header}>{event.title}</h1>
         <span className={styles.description}>{event.description}</span>
-        <p className={styles.date}>{event.date}</p>
+        {/* <p className={styles.date}>{event.date}</p> */}
         <div className={styles.buttons}>
           {event?.links?.map(link => (
             <Button
